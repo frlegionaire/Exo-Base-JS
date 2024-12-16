@@ -1,8 +1,8 @@
-let prenom = "John";
+let prenoms = "John";
 
 let nom = "Doe"
 
-const nomComplet = prenom.concat(' ',nom);
+const nomComplet = prenoms.concat(' ',nom);
 console.log(nomComplet)
 
 let sujet = "Le chat";
@@ -31,3 +31,19 @@ let premiernombre = nombres.shift();
 
 console.log(nombres);
 console.log(premiernombre);
+
+function saluer(prenom){
+        return("Bonjour" + ' ' + prenom );
+}
+
+console.log(saluer("Alice"));
+
+function multiplication(multi){
+    var z = 7;
+    var p= 8;
+    multi = z*p;
+    return(multi);
+
+}
+
+console.log(multiplication("multi"));
