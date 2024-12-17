@@ -1,40 +1,22 @@
+const listeu = document.querySelector('ul');
+const supp = document.createElement('button');
+const body = document.querySelector('.liste');
+const demon = document.querySelector('.demo');
 
-const body = document.querySelector('body');
-const p = document.createElement('p');
-const btn = document.createElement('button');
+body.appendChild(supp);
+supp.textContent = "Pour supprimer une ligne"
 
-body.appendChild(btn);
-body.appendChild(p);
-
-btn.textContent = "Appuyer ici";
-
-btn.addEventListener ('click', () =>{
-    p.textContent = "Hello, world!"
+supp.addEventListener ('click', () => {
+        listeu.removeChild(listeu.firstElementChild);
 })
 
-
-const p1 = document.createElement('p');
-const btn1 = document.createElement('button');
-
-body.appendChild(btn1);
-body.appendChild(p1);
-
-btn1.textContent = "Appuyer ici pour changer la couleur du texte";
-p1.textContent = "Hello, world!";
-
-btn1.addEventListener ('click', () =>{
-    p1.style.color = "red";
-})
-
-const listeu = document.createElement('ul');
-const ajout = document.createElement('button')
-
-body.appendChild(ajout);
-body.appendChild(listeu);
-ajout.textContent = "Pour ajouter une ligne"
-
-ajout.addEventListener ('click', () => {
-    const baliseli = document.createElement('li');
-    listeu.appendChild(baliseli);
-    baliseli.textContent = "Nouvel Element";
-})
+function consol(bouton) {
+    alert(bouton);
+}
+for (i = 1; i <= 3; i++){
+    const button = document.createElement("button")
+    button.textContent = "bouton " + i;
+    button.id = "Mon bouton" + " " + i;
+    button.addEventListener("click", () => consol(button.id))
+    demon.appendChild(button) 
+}
