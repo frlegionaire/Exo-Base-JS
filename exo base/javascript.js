@@ -88,26 +88,24 @@ for (let i = 1; i <= 20; i++ ) {
 //  devinerlechiffre();
 
 
-function jourdanslemois(mois, annee) {
-    let mois;
-    mois = prompt('entrer le mois');
-    let annee;
-    annee = prompt("donne moi l'annee");
+function jourdanslemois() {
+   const mois = prompt('entrer le mois');
+   const annee = prompt("donne moi l'annee");
 
     switch (mois)  {
         case '1' :
-            return ("Il y a 31 jours au mois de janvier");
+            alert("Il y a 31 jours au mois de janvier");
             break;
         case '2' :
             if ( annee % 4 === 0 ){
-                return ("Pour le mois de février, celui-ci compte 29 jours.");
+                alert("Pour le mois de février, celui-ci compte 29 jours.");
                 break;
             } else {
-                return ("Pour le mois de février, celui-ci compte 28 jours.");
+                alert("Pour le mois de février, celui-ci compte 28 jours.");
                 break;
             }
         case '3':
-            alert('Il y a 31 jours au mois de mars');
+            alert("Il y a 31 jours au mois de mars");
             break;
         case '4' :
             alert("Il y a 30 jours au mois de d'avril");
@@ -138,7 +136,10 @@ function jourdanslemois(mois, annee) {
             break;
         default : 
             alert('Desole, votre réponse ne correspond pas à un mois');
+            break;
     }
 }
 jourdanslemois();
+
+
 
